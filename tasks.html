@@ -34,22 +34,97 @@ main{max-width:1480px;margin:auto;padding:24px 26px 55px;position:relative;z-ind
 .tract-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}.mapbox{background:#e8d5ae;border:2px solid #b77a39;border-radius:17px;padding:20px;min-height:330px;color:var(--green)}.mapbox svg{width:100%;height:245px}.scorebox{background:#073b2d;color:var(--cream);border:2px solid var(--gold);border-radius:17px;padding:20px}.scorebox h3{color:var(--gold);font: bold 15px Arial}.bigscore{font:bold 46px Georgia;text-align:center;margin:20px}.leader{display:flex;justify-content:space-between;border-top:1px solid #87654a;padding:10px 0}.how{margin-top:18px}.howgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.howitem{background:#fff1d8;border:1px solid #d0a36c;border-radius:12px;padding:13px}.howitem b{display:block;color:var(--burg)}.periods{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.periods button{border:1px solid #b77a39;background:transparent;border-radius:15px;padding:7px 12px;cursor:pointer;color:var(--burg);font: bold 12px Arial}.periods button.active{background:var(--burg);color:white}
 @media(max-width:1050px){.level-layout{grid-template-columns:1fr}.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding-left:0}.timeline:before,.level-card:before{display:none}.level-card{margin:0}.challenge-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){header{height:auto;padding:12px 16px}.brand{min-width:0}.brand small{display:none}nav{order:3;width:100%;justify-content:space-between;gap:8px}nav a{font-size:13px}.login{font-size:12px;padding:9px}.level-layout{display:block}.timeline{grid-template-columns:1fr}.level-card{min-height:100px}.shield{width:72px;height:84px;flex-basis:72px}.parchment{padding:14px}.level-top{grid-template-columns:1fr}.cave{height:115px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid #c28a4b;padding:7px}.detail-grid,.tract-grid{grid-template-columns:1fr}.detail-grid>div+div{border:0;border-top:1px solid #c28a4b;padding:10px 0 0}.challenge-grid,.howgrid{grid-template-columns:1fr}.task-head{gap:8px}.task-state{font-size:10px}.task-head strong{font-size:15px}.task-detail{padding:12px}.hero p{font-size:15px}}
+
+/* Public, read-only territory map */
+.territory-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:18px}
+.territory-heading p{max-width:700px;margin:0}
+.eyebrow{font:bold 12px Arial,sans-serif;letter-spacing:2px;color:#9b6b32}
+.map-total{background:#0b4533;color:#f6e2b9;border:1px solid #c28a4b;border-radius:14px;padding:12px 18px;min-width:170px;text-align:center}
+.map-total strong,.map-total span{display:block}.map-total strong{font-size:22px;color:#f1c46d}.map-total span{font-size:12px}
+.territory-map-wrap{background:#e8d5ae;border:2px solid #b77a39;border-radius:18px;padding:12px 16px 14px}
+.territory-map{display:block;width:100%;max-height:570px}
+.map-caption{text-align:center;color:#735638;font:12px Arial,sans-serif;padding:3px 0 5px}
+.territory-legend{margin-top:22px;background:#fff0d3;border:1px solid #d0a36c;border-radius:16px;padding:17px 20px}
+.territory-legend h3{font:bold 14px Arial,sans-serif;letter-spacing:1px;color:#6b2639;margin:0 0 14px}
+.legend-item{display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid #dec49a}
+.legend-item b,.legend-item small{display:block}.legend-item b{color:#38242a}.legend-item small{font-size:12px;color:#806044}
+.legend-swatch{width:22px;height:22px;border-radius:6px;border:2px solid #fff;box-shadow:0 0 0 1px #9b774c;flex:0 0 22px}
+.legend-swatch.burgundy{background:#8f314c}.legend-swatch.green{background:#3e7858}.legend-swatch.gold{background:#bd8a2f}.legend-swatch.blue{background:#426b9b}.legend-swatch.violet{background:#875c9c}.legend-swatch.copper{background:#c56b38}
+.territory-note{font-size:12px;color:#76543a;margin:15px 3px 0}
+@media(max-width:680px){.territory-heading{display:block}.map-total{margin-top:14px}.territory-map-wrap{padding:7px}.territory-legend{padding:14px}}
+
+
+.main-total{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#0b4533;color:#f6e2b9;border:1px solid #c28a4b;border-radius:12px;padding:10px 14px;margin:12px 0 8px}
+.main-total strong{font-size:22px;color:#f1c46d}.main-total span{font-size:12px;opacity:.9}
+.shoe-scoring{margin-top:22px;background:#0b4533;color:#f6e2b9;border:1px solid #c28a4b;border-radius:16px;padding:17px 20px}
+.shoe-scoring h3{margin:0 0 6px;color:#f1c46d;font:bold 14px Arial,sans-serif;letter-spacing:1px}
+.shoe-scoring p{margin:0 0 13px}.coefficient-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.coefficient-grid div{background:#164936;border:1px solid #98764f;border-radius:10px;padding:10px;text-align:center}
+.coefficient-grid b,.coefficient-grid strong{display:block}.coefficient-grid b{font-size:12px}.coefficient-grid strong{font-size:23px;color:#f1c46d;margin-top:4px}
+@media(max-width:680px){.coefficient-grid{grid-template-columns:repeat(2,1fr)}}
+
+
+/* Podertyi Cherевик — public map and route showcase */
+.shoe-page{background:linear-gradient(145deg,#f8e9c9 0%,#f2dfb8 100%);padding:28px}
+.shoe-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}
+.shoe-heading h2{font-size:clamp(30px,4vw,44px);color:#38251b;margin:4px 0 6px}
+.shoe-heading p{max-width:900px;font-size:17px;margin:0;color:#382b22}
+.shoe-mark{font-size:42px;background:#e8d2a7;border:1px solid #bd9259;border-radius:18px;padding:14px 18px}
+.territory-board{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(260px,.9fr);gap:20px;align-items:stretch;margin:22px 0 26px}
+.map-panel{background:#f4e3c1;border:1px solid #d1b17d;border-radius:18px;padding:14px 12px 10px;min-width:0}
+.territory-map{display:block;width:100%;height:auto;max-height:550px}
+.map-caption{font:12px Arial,sans-serif;color:#735638;padding:8px 10px 2px}
+.territory-side{display:flex;flex-direction:column;gap:14px}
+.legend-card{background:#f1dfbd;border:1px solid #c79b60;border-radius:17px;padding:20px 19px;color:#38251b}
+.legend-card h3{font-size:25px;margin:0 0 15px;color:#38251b}
+.legend-item{display:flex;align-items:center;gap:12px;padding:7px 0;border:0;color:#382b22}
+.legend-item b{font-size:15px}
+.legend-swatch{width:20px;height:20px;border-radius:6px;transform:rotate(45deg);border:1px solid #60432c;box-shadow:none;flex:0 0 20px}
+.legend-swatch.burgundy{background:#8f314c}.legend-swatch.green{background:#3e7858}.legend-swatch.gold{background:#bd8a2f}.legend-swatch.blue{background:#426b9b}.legend-swatch.violet{background:#875c9c}.legend-swatch.copper{background:#c56b38}.legend-swatch.unclaimed{background:transparent}
+.how-card{flex:1;border-top:1px solid #d4b98d}
+.how-card h3{font-size:21px}
+.how-card ol{padding-left:22px;margin:8px 0 0}
+.how-card li{padding:5px 0;font-size:15px;line-height:1.4}
+.shoe-scoring{background:#0b4533;color:#f6e2b9;border:1px solid #c28a4b;border-radius:16px;padding:18px 20px;margin:18px 0 30px}
+.shoe-scoring h3{margin:0 0 6px;color:#f1c46d;font:bold 14px Arial,sans-serif;letter-spacing:1px}
+.shoe-scoring p{margin:0 0 13px}
+.coefficient-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.coefficient-grid div{background:#164936;border:1px solid #98764f;border-radius:10px;padding:10px;text-align:center}
+.coefficient-grid b,.coefficient-grid strong{display:block}.coefficient-grid b{font-size:12px}.coefficient-grid strong{font-size:23px;color:#f1c46d;margin-top:4px}
+.routes-section{margin-top:28px;border-top:1px solid #c9a875;padding-top:22px}
+.routes-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}
+.routes-heading h2{font-size:clamp(27px,3.5vw,40px);color:#38251b;margin:0}
+.routes-heading p{font-size:16px;margin:2px 0;color:#5a4431}
+.route-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.route-card{overflow:hidden;border:1px solid #d2b98e;border-radius:17px;background:#f8e9c9;box-shadow:0 5px 14px #34201016}
+.route-art{height:135px;display:flex;align-items:center;justify-content:center;font-size:42px;color:#fff6df;text-shadow:0 3px 5px #24180d55}
+.route-art.forest{background:linear-gradient(120deg,#5d7651,#a69a70 55%,#6b8580)}
+.route-art.sunset{background:linear-gradient(120deg,#d08c5d,#e1b879 50%,#69827d)}
+.route-art.valley{background:linear-gradient(120deg,#527968,#8da48a 55%,#5c8190)}
+.route-content{padding:16px 18px 18px}
+.route-content h3{font-size:22px;color:#38251b;margin:0 0 7px}
+.route-content p{font-size:15px;color:#4a3829;margin:0 0 12px}
+.route-content span{font-weight:bold;color:#255638;font-size:14px}
+.territory-note{font-size:12px;color:#76543a;margin:20px 3px 0}
+@media(max-width:900px){.territory-board{grid-template-columns:1fr}.territory-side{display:grid;grid-template-columns:1fr 1fr}.route-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.shoe-page{padding:14px}.shoe-heading{align-items:flex-start}.shoe-mark{font-size:28px;padding:10px}.territory-side{grid-template-columns:1fr}.coefficient-grid{grid-template-columns:repeat(2,1fr)}.route-cards{grid-template-columns:1fr}.map-panel{padding:7px}.map-caption{font-size:10px}}
+
 </style></head><body>
 <header><div class="brand"><span class="fleur">⚜</span><div><strong>ПЛАСТ</strong><small>Українська скаутська<br>організація в Чехії</small></div></div><nav><a href="about.html">Про ГАРТ</a><a href="competition.html">Про змаг</a><a class="current" href="tasks.html">Завдання</a><a href="rating.html">Рейтинг</a><a href="scoring.html">Оцінювання</a><a href="faq.html">ЧАПИ</a></nav><a class="login" href="captain.html" style="text-decoration:none">♟ Вхід для гуртків</a></header>
 <main><section class="hero"><h1 id="pageTitle">Завдання</h1><p id="pageSubtitle">Шлях гуртка через чотири рівні випробувань.<br>Виконуйте завдання, здобувайте бали та наближайтеся до титулу<br>«Найкращий гурток року».</p></section>
-<div class="switcher"><button class="active" data-view="levels">ОСНОВНІ РІВНІ</button><button data-view="challenges">ТАЄМНІ ВИКЛИКИ</button><button data-view="tract">КОРОЛІВСЬКИЙ ТРАКТ</button></div>
+<div class="switcher"><button class="active" data-view="levels">ОСНОВНІ РІВНІ</button><button data-view="challenges">ТАЄМНІ ВИКЛИКИ</button><button data-view="tract">ПОДЕРТИЙ ЧЕРЕВИК</button></div>
 <section id="levels" class="view active"><div class="level-layout"><aside class="timeline">
-<button class="level-card selected" data-level="0"><div class="shield">♜</div><div class="level-copy"><h3>I. Таємниця підземель</h3><p>▦ Листопад – Грудень 2026</p><p>▤ 4 завдання</p></div><span class="pill">Активний</span></button>
-<div class="level-card locked"><div class="shield blue">❄</div><div class="level-copy"><h3>II. Сталеве серце та лід</h3><p>▦ Січень – Лютий 2027</p><p>▤ 4 завдання</p></div><span class="pill lock">🔒 Майбутній</span></div>
-<div class="level-card locked"><div class="shield green">♧</div><div class="level-copy"><h3>III. Поклик пробудження</h3><p>▦ Березень – Квітень 2027</p><p>▤ 4 завдання</p></div><span class="pill lock">🔒 Майбутній</span></div>
+<button class="level-card selected" data-level="0"><div class="shield">♜</div><div class="level-copy"><h3>I. Таємниця підземель</h3><p>▦ Листопад – Грудень 2026</p><p>▤ 3 завдання</p></div><span class="pill">Активний</span></button>
+<div class="level-card locked"><div class="shield blue">❄</div><div class="level-copy"><h3>II. Сталеве серце та лід</h3><p>▦ Січень – Лютий 2027</p><p>▤ 3 завдання</p></div><span class="pill lock">🔒 Майбутній</span></div>
+<div class="level-card locked"><div class="shield green">♧</div><div class="level-copy"><h3>III. Поклик пробудження</h3><p>▦ Березень – Квітень 2027</p><p>▤ 3 завдання</p></div><span class="pill lock">🔒 Майбутній</span></div>
 <div class="level-card locked"><div class="shield violet">⚔</div><div class="level-copy"><h3>IV. Королівська битва</h3><p>▦ Травень – Червень 2027</p><p>▤ 3 завдання</p></div><span class="pill lock">🔒 Майбутній</span></div>
 </aside><article class="parchment"><div class="level-top"><div class="cave"><span class="torch"></span></div><div><span class="status">● Активний</span><small>I рівень</small><h2>Таємниця підземель</h2><p>Вирушайте вглиб історії та відкрийте таємниці, що ховаються під поверхнею відомих місць, подій і людей.</p></div></div>
-<div class="stats"><div class="stat"><i>▦</i><div><b>Термін виконання</b><small>Листопад – Грудень 2026</small></div></div><div class="stat"><i>🏆</i><div><b>Максимум</b><small>50 балів</small></div></div><div class="stat"><i>▣</i><div><b>Кількість завдань</b><small>4</small></div></div></div>
-<h2 class="task-title">Завдання рівня</h2>
-<div class="task open"><div class="task-head" onclick="toggleTask(this)"><span class="number">1</span><strong>Шифр Вартового</strong><span class="points">10 балів</span><span class="task-state">Відкрито</span><span class="chev">⌃</span></div><div class="task-detail"><div class="detail-grid"><div><b>Завдання:</b><br>Розгадати онлайн-квест на знання пластових шифрів, символіки та історії Пласту в Чехії.</div><div><b>Вимоги:</b><br>• пройти всі етапи квесту;<br>• надіслати результат проходження.</div></div></div></div>
-<div class="task"><div class="task-head" onclick="toggleTask(this)"><span class="number">2</span><strong>Арсенал Захисту</strong><span class="points">15 балів</span><span class="task-state review">Подати звіт</span><span class="chev">⌄</span></div><div class="task-detail">Підготувати відеогайд до 3 хвилин: перша допомога при зимових травмах або складання наплічника для зимової мандрівки.</div></div>
-<div class="task"><div class="task-head" onclick="toggleTask(this)"><span class="number">3</span><strong>Різдвяне Світло</strong><span class="points">15 балів</span><span class="task-state submit">Подати звіт</span><span class="chev">⌄</span></div><div class="task-detail">Організувати у своєму осередку акцію, спрямовану на допомогу іншим: благодійний збір, тематичний захід або поширення ВВМ.</div></div>
-<div class="task"><div class="task-head" onclick="toggleTask(this)"><span class="number">4</span><strong>Таємний резерв</strong><span class="points">10 балів</span><span class="task-state wait">Очікує відкриття</span><span class="chev">⌄</span></div><div class="task-detail">Деталі цього завдання будуть оприлюднені організаторами окремо.</div></div>
+<div class="stats"><div class="stat"><i>▦</i><div><b>Термін виконання</b><small>Листопад – Грудень 2026</small></div></div><div class="stat"><i>🏆</i><div><b>Максимум за рівень</b><small>100 балів</small></div></div><div class="stat"><i>▣</i><div><b>Кількість завдань</b><small>3</small></div></div></div>
+<div class="main-total"><b>Основний змаг</b><strong>400 балів</strong><span>4 етапи × 100 балів</span></div><h2 class="task-title">Завдання рівня</h2>
+<div class="task open"><div class="task-head" onclick="toggleTask(this)"><span class="number">1</span><strong>Шифр Вартового</strong><span class="points">30 балів</span><span class="task-state">Відкрито</span><span class="chev">⌃</span></div><div class="task-detail"><div class="detail-grid"><div><b>Завдання:</b><br>Розгадати онлайн-квест на знання пластових шифрів, символіки та історії Пласту в Чехії.</div><div><b>Вимоги:</b><br>• пройти всі етапи квесту;<br>• надіслати результат проходження.</div></div></div></div>
+<div class="task"><div class="task-head" onclick="toggleTask(this)"><span class="number">2</span><strong>Арсенал Захисту</strong><span class="points">35 балів</span><span class="task-state review">Подати звіт</span><span class="chev">⌄</span></div><div class="task-detail">Підготувати відеогайд до 3 хвилин: перша допомога при зимових травмах або складання наплічника для зимової мандрівки.</div></div>
+<div class="task"><div class="task-head" onclick="toggleTask(this)"><span class="number">3</span><strong>Різдвяне Світло</strong><span class="points">35 балів</span><span class="task-state submit">Подати звіт</span><span class="chev">⌄</span></div><div class="task-detail">Організувати у своєму осередку акцію, спрямовану на допомогу іншим: благодійний збір, тематичний захід або поширення ВВМ.</div></div>
+
 </article></div></section>
 <section id="challenges" class="view"><article class="parchment"><h2 class="challenge-intro">Не всі випробування можна передбачити…</h2><p>Короткі несподівані завдання, які з’являються протягом сезону та додають бали до загального заліку.</p><div class="challenge-grid">
 <div class="challenge"><small>ВИКЛИК 01</small><h3>Кодова тривога</h3><div class="points">+15 балів</div><footer><span>АКТИВНИЙ</span></footer></div>
@@ -59,9 +134,106 @@ main{max-width:1480px;margin:auto;padding:24px 26px 55px;position:relative;z-ind
 <div class="challenge inactive"><small>ВИКЛИК 05　🔒</small><h3>Слідами легенди</h3><div class="points">+25 балів</div><footer><span>НЕАКТИВНИЙ</span></footer></div>
 <div class="challenge inactive"><small>ВИКЛИК 06　🔒</small><h3>Останній сигнал</h3><div class="points">+20 балів</div><footer><span>НЕАКТИВНИЙ</span></footer></div>
 </div><p style="font-size:13px;color:#76543a;margin-top:20px">Назви та бали демонстраційні. Організатори відкривають умови активних викликів окремо.</p></article></section>
-<section id="tract" class="view"><article class="parchment"><div class="tract-grid"><div class="mapbox"><b>СТЕЖКА КОРОЛІВСТВА</b><svg viewBox="0 0 700 270"><path d="M25 225 C115 140 160 240 250 155 S390 200 470 100 S600 140 680 25" fill="none" stroke="#fff5db" stroke-width="22" stroke-linecap="round"/><path d="M25 225 C115 140 160 240 250 155 S390 200 470 100 S600 140 680 25" fill="none" stroke="#d99a27" stroke-width="5" stroke-dasharray="12 9"/><g fill="#70232d" stroke="#d99a27" stroke-width="4"><circle cx="25" cy="225" r="12"/><circle cx="250" cy="155" r="12"/><circle cx="680" cy="25" r="12"/></g><g fill="#255638" font-size="18" font-weight="bold"><text x="5" y="260">ПРАГА</text><text x="220" y="130">БРНО</text><text x="610" y="55">ОСТРАВА</text></g></svg><small>Схематичний маршрут між осередками, не навігаційна карта.</small></div><aside class="scorebox"><h3>ЗАГАЛЬНИЙ КІЛОМЕТРАЖ</h3><div class="bigscore">1 248 км</div><small>Демонстраційні дані</small><h3 style="margin-top:25px">ЛІДЕРИ МАНДРІВОК</h3><div class="leader"><b>🥇 Зоряні кішки</b><b>342 км</b></div><div class="leader"><b>🥈 Кажани і Нунчаки</b><b>296 км</b></div><div class="leader"><b>🥉 Лисі бички</b><b>241 км</b></div></aside></div><div class="how"><h2 class="task-title">Як зараховуються кілометри?</h2><div class="howgrid"><div class="howitem"><b>01 · GPS-трек</b>Зафіксуй маршрут у Mapy.cz, Strava або іншому застосунку.</div><div class="howitem"><b>02 · Фотофіксація</b>Щонайменше три фотографії в різних точках маршруту.</div><div class="howitem"><b>03 · Звіт</b>Трек, фото та склад учасників наприкінці двомісячного блоку.</div></div><div class="periods"><button class="active" onclick="period(this,'Грудень 2026')">Грудень 2026</button><button onclick="period(this,'Лютий 2027')">Лютий 2027</button><button onclick="period(this,'Квітень 2027')">Квітень 2027</button><button onclick="period(this,'Червень 2027')">Червень 2027</button></div><p id="periodLabel" style="font-size:13px;color:#76543a">Обраний звітний період: Грудень 2026</p></div></article></section>
+<section id="tract" class="view">
+<article class="parchment shoe-page">
+  <div class="shoe-heading">
+    <div>
+      <small class="eyebrow">МАНДРІВНИЦЬКИЙ ЛІТОПИС ГАРТУ</small>
+      <h2>Подертий черевик</h2>
+      <p>Карта Чехії поділена на невеликі території. Гурток, який першим підтвердив мандрівку через територію, відкриває її та залишає на ній свій колір.</p>
+    </div>
+    <div class="shoe-mark">🥾</div>
+  </div>
+
+  <div class="territory-board">
+    <div class="map-panel">
+      <svg class="territory-map" viewBox="0 0 900 540" role="img" aria-label="Схематична карта Чехії з шестикутними територіями гуртків">
+        <defs>
+          <clipPath id="czHexClip"><path d="M72 188 L102 142 L151 135 L188 93 L244 105 L282 68 L331 82 L370 53 L424 72 L468 51 L515 78 L562 67 L601 99 L650 88 L684 116 L731 111 L762 145 L812 153 L833 190 L858 218 L841 250 L865 280 L842 310 L855 344 L823 370 L806 414 L765 426 L739 458 L695 450 L660 482 L613 469 L578 496 L535 477 L498 501 L452 477 L412 498 L371 473 L331 486 L296 459 L251 468 L221 438 L176 434 L157 404 L117 393 L109 360 L75 340 L88 307 L59 279 L78 247 L54 218 Z"/></clipPath>
+          <pattern id="czHexGrid" width="64" height="56" patternUnits="userSpaceOnUse">
+            <path d="M16 1 L48 1 L63 28 L48 55 L16 55 L1 28 Z" fill="none" stroke="#6e4b2c" stroke-width="2.2" opacity=".9"/>
+          </pattern>
+        </defs>
+        <path d="M72 188 L102 142 L151 135 L188 93 L244 105 L282 68 L331 82 L370 53 L424 72 L468 51 L515 78 L562 67 L601 99 L650 88 L684 116 L731 111 L762 145 L812 153 L833 190 L858 218 L841 250 L865 280 L842 310 L855 344 L823 370 L806 414 L765 426 L739 458 L695 450 L660 482 L613 469 L578 496 L535 477 L498 501 L452 477 L412 498 L371 473 L331 486 L296 459 L251 468 L221 438 L176 434 L157 404 L117 393 L109 360 L75 340 L88 307 L59 279 L78 247 L54 218 Z" fill="#f1dfba" stroke="#4b3325" stroke-width="7" stroke-linejoin="round"/>
+        <g clip-path="url(#czHexClip)">
+          <rect x="40" y="40" width="850" height="480" fill="#f1dfba"/>
+          <g fill="#8f314c">
+            <path d="M150 160h32l16 28-16 28h-32l-16-28z M214 160h32l16 28-16 28h-32l-16-28z M182 216h32l16 28-16 28h-32l-16-28z M246 216h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <g fill="#3e7858">
+            <path d="M342 208h32l16 28-16 28h-32l-16-28z M406 208h32l16 28-16 28h-32l-16-28z M374 264h32l16 28-16 28h-32l-16-28z M438 264h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <g fill="#bd8a2f">
+            <path d="M470 320h32l16 28-16 28h-32l-16-28z M534 320h32l16 28-16 28h-32l-16-28z M502 376h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <g fill="#426b9b">
+            <path d="M630 264h32l16 28-16 28h-32l-16-28z M694 264h32l16 28-16 28h-32l-16-28z M662 320h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <g fill="#875c9c">
+            <path d="M566 152h32l16 28-16 28h-32l-16-28z M630 152h32l16 28-16 28h-32l-16-28z M598 208h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <g fill="#c56b38">
+            <path d="M726 344h32l16 28-16 28h-32l-16-28z M790 344h32l16 28-16 28h-32l-16-28z M758 400h32l16 28-16 28h-32l-16-28z"/>
+          </g>
+          <rect x="40" y="40" width="850" height="480" fill="url(#czHexGrid)"/>
+        </g>
+        <g fill="#3c2a20" font-family="Georgia,serif" font-size="20" font-weight="bold" text-anchor="middle">
+          <text x="215" y="310">Пльзень</text><text x="490" y="285">Прага</text><text x="640" y="405">Брно</text><text x="770" y="325">Острава</text>
+        </g>
+        <g fill="#3c2a20">
+          <circle cx="215" cy="322" r="6"/><circle cx="490" cy="297" r="6"/><circle cx="640" cy="417" r="6"/><circle cx="770" cy="337" r="6"/>
+        </g>
+      </svg>
+      <div class="map-caption">Схематична карта Чехії · шестикутники — умовні території, не для навігації</div>
+    </div>
+
+    <aside class="territory-side">
+      <div class="legend-card">
+        <h3>Легенда</h3>
+        <div class="legend-item"><span class="legend-swatch burgundy"></span><b>Білі Бульки</b></div>
+        <div class="legend-item"><span class="legend-swatch green"></span><b>Дикі кішки</b></div>
+        <div class="legend-item"><span class="legend-swatch gold"></span><b>Едельвейси</b></div>
+        <div class="legend-item"><span class="legend-swatch blue"></span><b>Шалені капібари</b></div>
+        <div class="legend-item"><span class="legend-swatch violet"></span><b>Грифіндори</b></div>
+        <div class="legend-item"><span class="legend-swatch copper"></span><b>Саламандри</b></div>
+        <div class="legend-item"><span class="legend-swatch unclaimed"></span><b>Ще не відкрито</b></div>
+      </div>
+      <div class="legend-card how-card">
+        <h3>🥾 Як відкрити територію?</h3>
+        <ol>
+          <li>Пройдіть піший маршрут.</li>
+          <li>Подайте звіт із GPS-треком і фото.</li>
+          <li>Після перевірки нові території отримають колір гуртка.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <div class="shoe-scoring">
+    <h3>Сезонні коефіцієнти</h3>
+    <p>Бали за зараховані кілометри множаться на коефіцієнт відповідного періоду.</p>
+    <div class="coefficient-grid">
+      <div><b>Листопад – грудень</b><strong>×2</strong></div>
+      <div><b>Січень – лютий</b><strong>×2,5</strong></div>
+      <div><b>Березень – квітень</b><strong>×1,5</strong></div>
+      <div><b>Травень – червень</b><strong>×1</strong></div>
+    </div>
+  </div>
+
+  <div class="routes-section">
+    <div class="routes-heading">
+      <div><h2>Маршрути від наших гуртків</h2><p>Ідеї для мандрівок, перевірені учасниками</p></div>
+    </div>
+    <div class="route-cards">
+      <article class="route-card"><div class="route-art forest">🌲　⛰</div><div class="route-content"><h3>Маршрути Білі Бульки</h3><p>Тут з’являться маршрути, якими поділиться гурток.</p><span>Очікуємо перші маршрути</span></div></article>
+      <article class="route-card"><div class="route-art sunset">🏞</div><div class="route-content"><h3>Маршрути Дикі кішки</h3><p>Тут з’являться маршрути, якими поділиться гурток.</p><span>Очікуємо перші маршрути</span></div></article>
+      <article class="route-card"><div class="route-art valley">🌄</div><div class="route-content"><h3>Маршрути Едельвейси</h3><p>Тут з’являться маршрути, якими поділиться гурток.</p><span>Очікуємо перші маршрути</span></div></article>
+    </div>
+  </div>
+  <p class="territory-note">Сторінка призначена лише для перегляду. Карта та перелік маршрутів не мають елементів редагування.</p>
+</article>
+</section>
 </main><script>
-document.querySelectorAll('.switcher button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.switcher button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(b.dataset.view).classList.add('active');let t={levels:['Завдання','Шлях гуртка через чотири рівні випробувань.'],challenges:['Таємні виклики','Несподівані випробування, що з’являються протягом сезону.'],tract:['Королівський Тракт','Кожен кілометр — крок до титулу Великих Мандрівників Королівства.']}[b.dataset.view];document.getElementById('pageTitle').textContent=t[0];document.getElementById('pageSubtitle').textContent=t[1]}));
+document.querySelectorAll('.switcher button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.switcher button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(b.dataset.view).classList.add('active');let t={levels:['Завдання','Шлях гуртка через чотири рівні випробувань.'],challenges:['Таємні виклики','Несподівані випробування, що з’являються протягом сезону.'],tract:['Подертий черевик','Кожна спільна мандрівка додає гуртку досвіду й балів до загального заліку ГАРТу.']}[b.dataset.view];document.getElementById('pageTitle').textContent=t[0];document.getElementById('pageSubtitle').textContent=t[1]}));
 function toggleTask(el){let task=el.parentElement;task.classList.toggle('open');let c=el.querySelector('.chev');if(c)c.textContent=task.classList.contains('open')?'⌃':'⌄'}
-function period(btn,label){document.querySelectorAll('.periods button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');document.getElementById('periodLabel').textContent='Обраний звітний період: '+label}
 </script></body></html>
