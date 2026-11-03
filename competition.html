@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ГАРТ — Про змаг</title>
+<style>
+:root{--forest:#073b2d;--forest2:#14543e;--cream:#f7e9c9;--paper:#fff3dc;--gold:#dfa329;--burg:#681c2b;--ink:#173b2d;--muted:#705b40}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2dfbd;color:var(--ink);font:16px/1.55 Georgia,serif}
+header{height:82px;background:var(--forest);color:#fff0d2;display:flex;align-items:center;justify-content:space-between;padding:10px clamp(16px,4vw,48px);gap:20px;border-bottom:3px solid var(--gold)}
+.brand{background:#f3e6c8;color:var(--forest);border:1px solid #cda66d;border-radius:9px;padding:7px 13px;display:flex;align-items:center;gap:10px}.brand .mark{font-size:36px}.brand b{font-size:24px;letter-spacing:3px;line-height:1;display:block}.brand small{display:block;font-size:11px;line-height:1.2}
+nav{display:flex;gap:clamp(12px,2.5vw,36px)}nav a{color:#fff0d2;text-decoration:none;white-space:nowrap}nav a.active{color:#f3b52f;border-bottom:3px solid var(--gold);padding-bottom:7px}.login{border:1px solid var(--gold);border-radius:10px;padding:9px 15px;white-space:nowrap}
+.hero{position:relative;overflow:hidden;text-align:center;min-height:235px;background:linear-gradient(#f8e9cc 0%,#e7d1a5 38%,#477650 100%);padding:25px 16px 38px}
+.hero:before{content:"";position:absolute;inset:80px -3% -5px;background:linear-gradient(155deg,transparent 0 20%,#739568 20% 34%,transparent 34%),linear-gradient(25deg,#174c37 0 34%,transparent 34%),linear-gradient(160deg,transparent 0 42%,#326746 42% 59%,transparent 59%);clip-path:polygon(0 65%,12% 28%,23% 58%,38% 8%,52% 55%,68% 12%,84% 55%,100% 0,100% 100%,0 100%)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(160deg,transparent 0 125px,#d08d1d 126px 129px,transparent 130px 205px);opacity:.55}
+.hero>*{position:relative;z-index:1}.mount{font-size:30px;line-height:1;color:var(--forest)}h1{font-size:clamp(40px,5vw,58px);line-height:1.05;margin:4px 0;color:var(--forest);text-shadow:0 2px #fff0d2}.ribbon{display:inline-block;background:var(--burg);color:#fff0d2;padding:5px 30px;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%);font-size:19px}
+.hero p{color:#fff2d8;font-size:18px;font-weight:bold;text-shadow:0 1px 4px #173b2d;margin:16px 0 0}
+main{max-width:1320px;margin:auto;padding:22px clamp(14px,3vw,32px) 48px}
+.panel{background:linear-gradient(135deg,#fff4df,#f1ddb8);border:1.5px solid #d2a365;border-radius:19px;box-shadow:0 5px 15px #65431b20;padding:22px;position:relative;overflow:hidden}
+h2{color:var(--burg);font-size:29px;line-height:1.15;margin:0 0 12px}h3{color:var(--burg);font-size:23px;margin:0 0 7px}h4{margin:0 0 5px;color:var(--forest);font-size:17px}
+.intro{display:grid;grid-template-columns:290px 1fr;gap:18px}.facts .fact{display:grid;grid-template-columns:42px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid #d5b27e}.facts .fact:last-child{border:0}.ico{font-size:27px;color:var(--forest)}
+.legend{display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:center}.castle{height:235px;border-radius:15px;border:3px solid #d4a55f;background:linear-gradient(#e9d4a7,#78936e);position:relative;overflow:hidden}.castle:before{content:"";position:absolute;left:8%;right:8%;bottom:18px;height:125px;background:#31583c;clip-path:polygon(0 100%,0 40%,12% 40%,12% 10%,24% 10%,24% 35%,36% 35%,36% 0,52% 0,52% 35%,65% 35%,65% 15%,78% 15%,78% 40%,100% 40%,100% 100%)}.castle:after{content:"⚑　⚑　⚑";position:absolute;top:27px;left:22%;font-size:25px;color:var(--burg)}
+.quote{background:#f5e5c7;border-left:4px solid var(--gold);padding:10px 14px;color:var(--burg);font-style:italic;margin:12px 0}
+.section-head{text-align:center;margin:28px 0 16px}.section-head h2{display:inline-block;margin:0 15px}.section-head:before,.section-head:after{content:"";display:inline-block;vertical-align:middle;width:13%;border-top:2px solid var(--gold)}.sub{text-align:center;margin:-5px auto 20px;max-width:850px}
+.track{margin:22px 0 28px}.track-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}.track-emblem{width:68px;height:76px;flex:0 0 68px;background:var(--forest);border:3px solid var(--gold);color:#ffe4a4;clip-path:polygon(5% 0,95% 0,92% 68%,50% 100%,8% 68%);display:grid;place-items:center;font-size:30px}.track-head p{margin:2px 0;color:#574b38}.phase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.phase{background:#fff7e7;border:1px solid #d5b27e;border-radius:13px;padding:15px}.phase-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.period{font-size:13px;background:#ead4a8;padding:4px 9px;border-radius:20px;white-space:nowrap;color:#65451d}.phase p{margin:7px 0}.phase ul{margin:7px 0 0;padding-left:19px}.phase li{margin:3px 0}
+details{border-top:1px solid #d9bd8d;margin-top:10px;padding-top:8px}summary{cursor:pointer;color:var(--burg);font-weight:bold}summary::marker{color:var(--gold)}
+.mini-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.mini{background:#f8e9ce;border:1px solid #d8b77e;border-radius:12px;padding:13px}.mini b{color:var(--forest)}
+.tract-box{background:linear-gradient(135deg,#073b2d,#14543e);color:#fff0d2;border:2px solid #c68e2d;border-radius:19px;padding:22px;margin-top:22px}.tract-box h2{color:#fff0d2}.tract-intro{display:grid;grid-template-columns:1fr 230px;gap:20px;align-items:center}.map-art{height:155px;border:1px solid #d7a43d;border-radius:14px;background:linear-gradient(145deg,#335f43,#a5a36b 55%,#e5cf9c);display:grid;place-items:center;font-size:60px;color:#f7d17b;text-shadow:0 2px 5px #173b2d}.tract-box p{margin:7px 0}.tract-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:15px}.tract-item{background:#f7e9c9;color:var(--ink);border-radius:12px;padding:13px}.tract-item b{color:var(--burg);display:block}.tract-box details{border-color:#77917a}.tract-box summary{color:#ffe1a0}
+.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.challenge{background:#fff6e5;border:1px solid #d4b17b;border-radius:13px;padding:15px}.challenge span{font-size:12px;color:#805b2c}
+.score{margin-top:24px;background:#681c2b;color:#fff0d2;border:2px solid #d9a33a;border-radius:19px;padding:22px}.score h2{color:#fff0d2}.score-row{display:grid;grid-template-columns:100px 1fr;gap:16px;align-items:center}.trophy{font-size:68px;text-align:center;color:#f2bf48}.score p{margin:5px 0}.score a{display:inline-block;background:#f0bd57;color:#173b2d;padding:9px 17px;border-radius:22px;text-decoration:none;font-weight:bold;margin-top:8px}
+footer{text-align:center;padding:20px;color:#fff0d2;background:var(--forest)}
+@media(max-width:900px){header{height:auto;flex-wrap:wrap}.brand{min-width:0}nav{order:3;width:100%;justify-content:center;flex-wrap:wrap}.intro{grid-template-columns:1fr}.legend{grid-template-columns:190px 1fr}.tract-intro{grid-template-columns:1fr 180px}}
+@media(max-width:620px){header{padding:9px 12px}.brand .mark{font-size:29px}.brand b{font-size:20px}.brand small{font-size:10px}.login{font-size:12px;padding:7px 9px}nav{gap:12px}nav a{font-size:13px}.hero{min-height:210px;padding-top:24px}.hero p{font-size:15px}.ribbon{font-size:15px}.panel{padding:17px}.legend{grid-template-columns:1fr}.castle{height:150px}.section-head:before,.section-head:after{width:6%}.section-head h2{font-size:24px}.phase-grid,.mini-cols,.tract-grid,.challenge-grid{grid-template-columns:1fr}.track-head{align-items:flex-start}.track-emblem{width:56px;height:64px;flex-basis:56px;font-size:25px}.period{font-size:11px}.tract-intro{grid-template-columns:1fr}.map-art{height:110px}.score-row{grid-template-columns:65px 1fr}.trophy{font-size:48px}h2{font-size:25px}}
+</style></head>
+<body>
+<header>
+<div class="brand"><span class="mark">⚜</span><div><b>ПЛАСТ</b><small>Українська скаутська організація в Чехії<br>Крайова Булава УПЮ</small></div></div>
+<nav><a href="about.html">Про ГАРТ</a><a class="active" href="competition.html">Про змаг</a><a href="tasks.html">Завдання</a><a href="rating.html">Рейтинг</a><a href="scoring.html">Оцінювання</a><a href="faq.html">ЧАПИ</a></nav><a class="login" href="captain.html" style="color:inherit;text-decoration:none">♟ Вхід для гуртків</a>
+</header>
+<section class="hero"><div class="mount">⌃　⌃　⌃</div><h1>Про змаг</h1><div class="ribbon">Літопис Мандрівників · Поклик легенд</div><p>Чотири печатки. Три осередки. Одна спільна пригода.</p></section>
+<main>
+<section class="intro">
+<aside class="panel facts"><h2>Загальна інформація</h2>
+<div class="fact"><span class="ico">♟</span><div><b>Учасники</b>Гуртки УПЮ</div></div>
+<div class="fact"><span class="ico">⌖</span><div><b>Осередки</b>Прага, Брно та Острава</div></div>
+<div class="fact"><span class="ico">▦</span><div><b>Тривалість</b>Листопад 2026 — червень 2027</div></div>
+<div class="fact"><span class="ico">⚒</span><div><b>Формат</b>Онлайн- й офлайн-випробування, мандрівництво та творчі виклики</div></div></aside>
+<article class="panel legend"><div class="castle" aria-label="Замок — сховище літопису"></div><div><h2>Легенда змагу</h2>
+<p>За давніми переказами, у таємних архівах королів Богемії було сховано <b>Літопис Мандрівників</b>. Його розділили на чотири частини та запечатали магічними печатками у трьох вузлах сили: Празі — Королівській Скарбниці, Брно — Фортеці Науки та Остраві — Сталевому Серці.</p>
+<div class="quote">«Коли молодь об'єднає свої сили, пройде крізь вогонь, сталь, знання та мандри — печатки розіб'ються, і вони отримають Великий Скарб засновників».</div>
+<p>Кожен пластовий гурток стає окремим загоном Шукачів. Протягом сезону гуртки проходять випробування, відкривають чотири печатки та наближаються до Великого Скарбу. Новий рівень легенди відкривається кожні два місяці.</p></div></article>
+</section>
+
+<div class="section-head"><h2>Три напрями ГАРТу</h2></div><p class="sub">Кожен напрям має власні випробування, але всі результати складаються в один спільний залік.</p>
+
+<section class="track panel">
+<div class="track-head"><div class="track-emblem">⚔</div><div><h2>А. Основний змаг</h2><p>Чотири двомісячні етапи — головний шлях Шукачів до Великого Скарбу.</p></div></div>
+<p>Кожен етап має власну тематику та набір завдань. Випробування охоплюють пластові знання, історію, самозарадність, фізичну підготовку, мандрівництво, екологію, майстерність, лідерство й командну роботу.</p>
+<div class="phase-grid">
+<article class="phase"><div class="phase-top"><h3>I. Таємниця Підземель</h3><span class="period">Листопад – грудень 2026</span></div><p><b>Фокус:</b> гурткова робота, пластова теорія, історія Пласту та перша медична допомога.</p><details><summary>Приклади випробувань</summary><ul><li>«Шифр Вартового» — онлайн-квест із пластових шифрів, символіки та історії.</li><li>«Арсенал Захисту» — короткий відеогайд про зимову безпеку або спорядження.</li><li>«Різдвяне Світло» — гурткова акція допомоги іншим.</li></ul></details></article>
+<article class="phase"><div class="phase-top"><h3>II. Сталеве Серце та Лід</h3><span class="period">Січень – лютий 2027</span></div><p><b>Фокус:</b> фізичний розвиток, зимове мандрівництво, виживання та командна робота.</p><details><summary>Приклади випробувань</summary><ul><li>«Гартування Сталі» — спільне зимове спортивне випробування.</li><li>«Картографи» — пошук таємних пластових кодів за координатами й картою.</li><li>«Гурткова кухня на льоду» — приготування гарячої страви в зимових умовах.</li></ul></details></article>
+<article class="phase"><div class="phase-top"><h3>III. Поклик Пробудження</h3><span class="period">Березень – квітень 2027</span></div><p><b>Фокус:</b> мандрівництво, екологія та піонірка.</p><details><summary>Приклади випробувань</summary><ul><li>«Стежками королів» — одноденна мандрівка щонайменше 12 км.</li><li>«Еко-Варта» — екологічна акція або просвітницьке заняття.</li><li>«Вузли Сили» — корисна споруда з використанням щонайменше п'яти вузлів.</li></ul></details></article>
+<article class="phase"><div class="phase-top"><h3>IV. Королівська Битва</h3><span class="period">Травень – червень 2027</span></div><p><b>Фокус:</b> лідерство, інтеграція, підсумок сезону та фінальне командне випробування.</p><details><summary>Приклади випробувань</summary><ul><li>«Провідники Нації» — власний гуртковий мініпроєкт.</li><li>«Таборова Готовність» — ревізія гурткового виряду.</li><li>Фінал — спільна міжгурткова мандрівка та офлайн-випробування в червні.</li></ul></details></article>
+</div>
+<div class="quote">Завдання відкриваються поступово: на початку відповідного етапу або завчасно — орієнтовно за тиждень до його старту.</div>
+</section>
+
+<section class="tract-box">
+<div class="tract-intro"><div><h2>Б. Королівський Тракт</h2><p><b>Кожен кілометр наближає до скарбу.</b></p><p>Паралельний напрям, присвячений мандрівництву та гуртковій активності. Гуртки накопичують кілометри під час спільних піших мандрівок. Пройдена відстань перетворюється на ігрові бали та впливає на загальний результат.</p><p>Мета — заохотити юнацтво більше мандрувати, відкривати Чехію та розвивати традицію спільних гурткових прогульок.</p></div><div class="map-art">⌖　➜　⌖</div></div>
+<div class="tract-grid">
+<div class="tract-item"><b>01 · Як накопичувати кілометри?</b>Здійснювати спільні піші мандрівки та прогулянки визначеними маршрутами й скаутськими точками. Велосипеди, самокати й транспорт до заліку не входять.</div>
+<div class="tract-item"><b>02 · Коли зараховується мандрівка?</b>У мандрівці мають брати участь щонайменше 3/4 складу гуртка. За участь усього гуртка разом із виховником передбачено додатковий коефіцієнт-бонус.</div>
+<div class="tract-item"><b>03 · Як підтвердити результат?</b>GPS-трек або скриншот маршруту, щонайменше три фото з різних точок маршруту та склад учасників. Організатори звіряють маршрут, відстань і підтвердження.</div>
+<div class="tract-item"><b>04 · Коли подавати звіти?</b>Наприкінці кожного двомісячного блоку: грудень 2026, лютий 2027, квітень 2027 та червень 2027.</div>
+</div>
+<details><summary>Рекомендовані інструменти для GPS-трекінгу</summary><p>Mapy.cz, Strava або MapMyWalk. Гуртковий відповідальний зберігає посилання на треки чи скриншоти та фотофіксацію.</p></details>
+</section>
+
+<section class="track panel">
+<div class="track-head"><div class="track-emblem">✦</div><div><h2>В. Особливі завдання</h2><p>Несподівані виклики, які можуть з'явитися будь-коли протягом сезону.</p></div></div>
+<p>Короткі одноразові завдання поза основною програмою етапів. Вони дають гурткам простір для творчості, гумору, ініціативи, взаємодії та прояву пластового духу.</p>
+<div class="challenge-grid">
+<div class="challenge"><h4>Творчі виклики</h4><span>Фото · відео · комунікація</span><p>Тематичне фото, креативний допис для Instagram гуртка або коротке відео на задану тему.</p></div>
+<div class="challenge"><h4>Гумор і характер</h4><span>Дотепність · командний настрій</span><p>Незвичне привітання виховника, гумористичне інтерв'ю чи жартівлива історія про гурткове життя.</p></div>
+<div class="challenge"><h4>Пізнавальні та суспільно корисні</h4><span>Історія · пам'ять · служіння</span><p>Відвідати українську могилу в межах відповідного проєкту або долучитися до локальної корисної ініціативи.</p></div>
+<div class="challenge"><h4>Командні та пластові</h4><span>Вмілості · точки · спільна дія</span><p>Виконати гуртковий челендж за обмежений час, здати вмілість чи точки або забезпечити повну присутність гуртка на визначених сходинах.</p></div>
+</div>
+<div class="quote">Особливі завдання оголошуються протягом сезону. Кожне матиме власний термін, умови виконання та спосіб звітування. Ідеї нових викликів можна додавати впродовж усього змагу.</div>
+</section>
+
+<section class="score"><h2>Один залік — спільна перемога</h2><div class="score-row"><div class="trophy">🏆</div><div><p>Результати основного змагу, Королівського Тракту й Особливих завдань формують єдиний рейтинг гуртків.</p><p>За підсумками сезону визначається переможець, який здобуває звання <b>«Найкращий гурток Краю Чехія»</b>.</p><p>Окремі номінації та заохочувальні призи можуть відзначити гуртки за особливі досягнення.</p><a href="#оцінювання">Дізнатися про систему оцінювання　→</a></div></div><p style="margin-top:16px">Фінальна зустріч і завершальне випробування відбудуться на міжгуртковій мандрівці УПЮ в червні 2027 року.</p></section>
+</main><footer>ГАРТ · Крайовий змаг УПЮ · Поклик легенд</footer>
+</body></html>
